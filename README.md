@@ -45,6 +45,8 @@ GROUP BY 1,2;
 
 Solution :- 
 
+![Alt text](
+
 QUESTION 2 :- Next, it would be great to see a similar monthly trend for Gsearch, but this time **splitting out nonbrand and brand campaigns separately**. I am wondering if brand is picking up at all. If so, this is a good story to tell. 
 
 ```sql
