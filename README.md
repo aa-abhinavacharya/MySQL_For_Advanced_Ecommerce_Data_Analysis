@@ -45,7 +45,9 @@ GROUP BY 1,2;
 
 Solution :- 
 
-![Alt text](
+![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution1.JPG)
+
+This trend data(monthwise) shows that there is an overall increase in conversion rates i.e orders/website sessions from June month and flattening by the end of the year.
 
 QUESTION 2 :- Next, it would be great to see a similar monthly trend for Gsearch, but this time **splitting out nonbrand and brand campaigns separately**. I am wondering if brand is picking up at all. If so, this is a good story to tell. 
 
