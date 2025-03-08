@@ -47,7 +47,10 @@ Solution :-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution1.JPG)
 
-This trend data(monthwise) shows that there is an overall increase in conversion rates i.e orders/website sessions from June month and flattening by the end of the year.
+Conclusion from QUESTION 1 result :- 
+
+The data shows a significant increase in both Gsearch sessions and orders from March to November 2012, with a slight improvement in conversion rates. Gsearch appears to be a key driver of business growth, particularly in the later months, suggesting seasonality effects. Continued focus on optimizing Gsearch could further enhance traffic and conversions, offering opportunities for even greater growth.
+
 
 QUESTION 2 :- Next, it would be great to see a similar monthly trend for Gsearch, but this time **splitting out nonbrand and brand campaigns separately**. I am wondering if brand is picking up at all. If so, this is a good story to tell. 
 
@@ -72,6 +75,10 @@ Result :-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution2.JPG))
 
+Conclusion from QUESTION 2 result :-
+
+The data shows a consistent increase in both nonbrand and brand Gsearch sessions and orders over the months. While nonbrand sessions and orders significantly outpace brand campaigns, brand sessions and orders do show gradual growth, particularly in the later months. This indicates that brand campaigns are gaining traction, and highlighting this upward trend in brand performance could be an impactful story to share.
+
 QUESTION 3 :- While we’re on Gsearch, could you dive into nonbrand, and **pull monthly sessions and orders split by device type?** I want to flex our analytical muscles a little and show the board we really know our traffic sources.
 
 ```sql
@@ -95,6 +102,10 @@ GROUP BY 1,2;
 Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution3.JPG)
+
+Conclusion from QUESTION 3 result:-
+
+The data reveals that desktop sessions and orders consistently outpace mobile sessions and orders, indicating that desktop remains the primary driver of conversions. While mobile sessions have been growing, mobile orders are significantly lower, suggesting that mobile traffic is not converting as effectively as desktop. The trend highlights a potential opportunity to enhance the mobile user experience to capture more of the growing mobile traffic. Focusing on optimizing mobile performance could help balance the growth between both devices, maximizing overall conversions.
 
 QUESTION 4 :- I’m worried that one of our more pessimistic board members may be concerned about the large % of traffic from Gsearch. **Can you pull monthly trends for Gsearch, alongside monthly trends for each of our other channels?**
 
@@ -126,6 +137,10 @@ Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution4.JPG)
 
+Conclusion from QUESTION 4 result:-
+
+The data indicates that Gsearch paid sessions have been the dominant traffic source, showing steady growth from March to November 2012. However, other channels such as Bsearch paid, organic search, and direct type-in are also contributing, though at a much smaller scale. The relatively high share of Gsearch paid sessions might raise concerns about over-reliance on one channel. However, the growth in Bsearch paid and organic search traffic over time suggests that the business is diversifying its sources, reducing dependency on a single channel. It could be valuable to emphasize the ongoing diversification efforts to reassure the board.
+
 QUESTION 5 :-  I’d like to tell the story of our website performance improvements over the course of the first 8 months. **Could you pull session to order conversion rates, by month?**
 
 ```sql
@@ -145,6 +160,10 @@ GROUP BY 1,2;
 Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution5.JPG)
+
+Conclusion from QUESTION 5 result :-
+
+The data highlights a clear improvement in conversion rates over the first 8 months of 2012. While the conversion rate started at 0.0319 in March, it showed gradual improvement, reaching a peak of 0.0453 in October. This increase suggests that the website's performance improved over time, likely due to optimization efforts or changes in user behavior. Although the conversion rate slightly dipped in November, it still remained higher than in the earlier months, indicating a general upward trend in conversion efficiency. This improvement in conversion rates reflects positively on website optimization and could be a key point to emphasize when discussing business growth and website performance improvements.
 
 QUESTION 6 :- For the gsearch lander test, **please estimate the revenue that test earned us** (Hint: Look at the increase in CVR from the test (Jun 19 – Jul 28), and use nonbrand sessions and revenue since then to calculate incremental value)
 
@@ -223,6 +242,8 @@ Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution6(a).JPG)
 
+The data suggests that the "lander-1" page has a higher conversion rate (0.0406) compared to the "home" page (0.0318). Despite having a slightly lower number of sessions, the "lander-1" page appears to be more effective at converting visitors into orders. 
+
 Step 6:-finding the most recent pageview for gsearch nonbrand where the traffic was sent to /home
 
 ```sql
@@ -262,6 +283,9 @@ WHERE created_at < '2012-11-27'
 Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution6(c).JPG)
+
+Conclusion from QUESTION 6 result:-
+The Gsearch lander test has resulted in an estimated 202 incremental orders since July 29, which translates to roughly 50 extra orders per month. This indicates a positive impact on conversions due to the test, leading to a consistent increase in monthly revenue. By leveraging this incremental improvement, the business can continue to benefit from enhanced performance moving forward.
 
 QUESTION 7 :- For the landing page test you analyzed previously, it would be great to show a **full conversion funnel from each  of the two pages to orders**. You can use the same time period you analyzed last time (Jun 19 – Jul 28).
 
@@ -371,6 +395,11 @@ Result :-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution7.JPG)
 
+Conclusion from QUESTION 7 result:-
+
+The Custom Lander outperforms the Homepage across the entire conversion funnel, with higher conversion rates at each stage, particularly from landing page to product view and from MR Fuzzy to cart. This suggests that users coming from the custom landing page are more likely to continue through the purchase journey. The Homepage performs weaker, especially in the transition from shipping to billing.
+
+
 QUESTION 8 :-  I’d love for you to **quantify the impact of our billing test**, as well. Please analyze the lift generated from the test (Sep 10 – Nov 10), in terms of **revenue per billing page session**, and then pull the number of billing page sessions for the past month to understand monthly impact.
 
 ```sql
@@ -416,3 +445,11 @@ Result:-
 
 ![Alt text](https://github.com/aa-abhinavacharya/MySQL_For_Advanced_Ecommerce_Data_Analysis/blob/main/solution8(b).JPG)
 
+
+Conclusion from QUESTION 8 result:-
+
+The billing test generated a lift of $8.51 per billing session, leading to a total impact of $10,160 over the past month based on 1,194 billing sessions. This quantifies the positive revenue impact from the test and highlights the effectiveness of the new billing page version (/billing-2).
+
+# CONCLUSION
+
+There was a  gain in gathering valuable insights into traffic sources, conversion funnels, and the impact of optimization tests through the analysis of  key business data . It helped to learn how to identify growth opportunities by focusing on channels like Gsearch and understanding device-specific performance, particularly the need to optimize mobile experiences. Iy helped in brand vs. nonbrand campaigns comparison and their gradual growth highlighted the importance of balancing both efforts. Additionally, quantifying the lift from tests, such as the billing page update, reinforced the value of continuous testing for revenue growth. Overall, this experience enhances the ability to analyze performance metrics, optimize conversions, and make data-driven recommendations that drive business results.
